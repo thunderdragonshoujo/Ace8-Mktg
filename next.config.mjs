@@ -17,6 +17,11 @@ const nextConfig = {
         destination: "/services/automated-testing",
         permanent: true,
       },
+      {
+        source: "/services/microservices",
+        destination: "/services/micro-service",
+        permanent: true,
+      },
     ];
   },
 };
