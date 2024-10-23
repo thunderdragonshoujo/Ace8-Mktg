@@ -113,44 +113,44 @@ export const data = [
           "To ensure seamless scalability and simplified management, XYZ Ventures decided to migrate their custom Golang microservices to AWS Lambda, leveraging serverless architecture. This transition would not only facilitate automatic scaling but also optimize costs by eliminating the need for permanent infrastructure.",
       },
       {
-        paragraph: "AceIT Consulting Solution",
+        paragraph: "Ace8 Consulting Solution",
       },
       {
         paragraph:
-          "AceIT Consulting, a specialized cloud consultancy, was engaged to assist XYZ Ventures with this migration.",
+          "Ace8 Consulting, a specialized cloud consultancy, was engaged to assist XYZ Ventures with this migration.",
       },
       {
         paragraph:
-          "AceIT understood the urgency and devised a comprehensive strategy:",
+          "Ace8 understood the urgency and devised a comprehensive strategy:",
       },
       {
         paragraph:
-          "1. Assessment and Planning: AceIT's team collaborated closely with XYZ Venture's engineers to analyze each microservice's functionalities, dependencies, and performance characteristics. This analysis helped identify potential challenges in the migration process.",
+          "1. Assessment and Planning: Ace8's team collaborated closely with XYZ Venture's engineers to analyze each microservice's functionalities, dependencies, and performance characteristics. This analysis helped identify potential challenges in the migration process.",
       },
       {
         paragraph:
-          "2. Conversion Tools Development: AceIT developed custom conversion tools that could efficiently translate Golang-based microservices into AWS Lambda functions. The tools automatically generated Lambda-compatible code and adapted relevant parts of the microservices to the serverless architecture.",
+          "2. Conversion Tools Development: Ace8 developed custom conversion tools that could efficiently translate Golang-based microservices into AWS Lambda functions. The tools automatically generated Lambda-compatible code and adapted relevant parts of the microservices to the serverless architecture.",
       },
       {
         paragraph:
-          "3. Performance Optimization: As part of the migration, AceIT optimized the codebase to ensure that the Lambda functions were efficient and performed well under variable workloads.",
+          "3. Performance Optimization: As part of the migration, Ace8 optimized the codebase to ensure that the Lambda functions were efficient and performed well under variable workloads.",
       },
       {
         paragraph:
-          " 4. Integration and Testing: After the conversion, AceIT&apos;s team integrated the AWS Lambda functions with the rest of the platform and conducted rigorous testing to validate their functionality, performance, and scalability.",
+          " 4. Integration and Testing: After the conversion, Ace8&apos;s team integrated the AWS Lambda functions with the rest of the platform and conducted rigorous testing to validate their functionality, performance, and scalability.",
       },
       {
         paragraph:
-          "5. Deployment and Monitoring: AceIT assisted in deploying the migrated platform on AWS and implemented thorough monitoring and alerting mechanisms to ensure the platform's stability and reliability.",
+          "5. Deployment and Monitoring: Ace8 assisted in deploying the migrated platform on AWS and implemented thorough monitoring and alerting mechanisms to ensure the platform's stability and reliability.",
       },
       {
         subheader: "  Successful Outcome:",
         paragraph:
-          "Despite the complexity of migrating numerous custom microservices to AWS Lambda, AceIT Consulting's expertise and conversion tools enabled XYZ Ventures to successfully complete the migration within the tight six-month timeframe. The new serverless architecture not only provided automatic scaling to handle high traffic but also reduced operational overhead and optimized costs. As a result, XYZ Ventures launched their web platform on time, offering customers an exceptional shopping experience during the peak season.",
+          "Despite the complexity of migrating numerous custom microservices to AWS Lambda, Ace8 Consulting's expertise and conversion tools enabled XYZ Ventures to successfully complete the migration within the tight six-month timeframe. The new serverless architecture not only provided automatic scaling to handle high traffic but also reduced operational overhead and optimized costs. As a result, XYZ Ventures launched their web platform on time, offering customers an exceptional shopping experience during the peak season.",
       },
       {
         paragraph:
-          "This case study demonstrates the strategic partnership between XYZ Ventures and AceIT Consulting, highlighting how advanced planning, tailored tooling, and expert knowledge can overcome challenges and accelerate digital transformations.",
+          "This case study demonstrates the strategic partnership between XYZ Ventures and Ace8 Consulting, highlighting how advanced planning, tailored tooling, and expert knowledge can overcome challenges and accelerate digital transformations.",
       },
     ],
   },

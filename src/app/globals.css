@@ -57,6 +57,7 @@ p {
   place-content: center;
   width: 100%;
   gap: 2rem;
+  row-gap: 4rem;
 }
 
 @media screen and (min-width: 600px) {
@@ -83,7 +84,7 @@ p {
 }
 
 
-.mask{
+.mask {
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 20%, #000 80%, transparent);
   mask-image: linear-gradient(90deg, transparent, #000 20%, #000 80%, transparent);
 }
@@ -97,11 +98,11 @@ p {
   @apply text-[3rem] leading-[3.5rem] sm:text-[6.5rem] sm:leading-[7.5rem] font-[700]
 }
 
-.sub-header{
-  @apply text-[2.8rem] font-[700] sm:text-[3.5rem]  leading-[3.3rem] sm:leading-[4rem]
+.sub-header {
+  @apply text-[3rem] font-[700] sm:text-[5rem] leading-[4rem] sm:leading-[6rem]
 }
 
-.post_responsive_grid{
+.post_responsive_grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   gap: 2rem;
@@ -110,10 +111,10 @@ p {
 
 .Toastify__toast-container {
   @media screen and (max-width: 800px) {
-      width: 60vw !important;
-      left: auto !important;
-      margin-top: 1rem !important;
-      margin-left: 1rem !important;
+    width: 60vw !important;
+    left: auto !important;
+    margin-top: 1rem !important;
+    margin-left: 1rem !important;
   }
 }
 
@@ -123,23 +124,65 @@ p {
   font-size: 1.6rem !important;
 
   @media screen and (max-width: 800px) {
-      font-size: 1.2rem !important;
+    font-size: 1.2rem !important;
   }
 }
 
-.react-tel-input .form-control{
+.react-tel-input .form-control {
   border: none !important;
   font-size: 1.2rem !important;
   padding-left: 4rem !important;
   width: auto !important;
 }
 
-.react-tel-input .flag-dropdown{
+.react-tel-input .flag-dropdown {
   border: none !important;
   background-color: transparent !important;
 }
 
-.react-tel-input .selected-flag{
+.react-tel-input .selected-flag {
   padding-left: 0 !important;
   width: 20px !important;
+}
+
+.hero_gradient_text {
+  background: linear-gradient(180deg, #FF88C3 0%, #9B86FE 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  /* Safari/Webkit support */
+  color: transparent;
+}
+
+
+.hero_gradient_text_ii {
+  background: linear-gradient(180deg, #FF88C3 0%, #9B86FE 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  /* Safari/Webkit support */
+  color: transparent;
+}
+
+
+
+.bg_gradient {
+  background: linear-gradient(180deg, #FF88C3 0%, #9B86FE 100%);
+}
+
+
+[data-animation-id='paragraph'] {
+  opacity: 0;
+}
+
+[data-animation-id='slideIn'] {
+  transform: translateX(50px);
+  opacity: 0;
+}
+
+[data-animation-id='fadeIn'] {
+  opacity: 0;
+}
+
+
+.header_ii {
+  @apply text-[3rem] leading-[4rem] sm:text-[3.5rem] sm:leading-[5rem] font-[700]
 }

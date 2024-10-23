@@ -3,7 +3,7 @@ import MaxContainer from '../../common/maxContainer'
 const Index = () => {
     const capabilities = [
         {
-            header: 'DevSecOps:',
+            header: <h2 className="header_ii">DevSecOps:</h2>,
             subheader: 'Bridging the Gap between Development, Security, & Operations',
             image: '/service_codesnippet.png',
             title: 'Combine Strengths, Deliver Securely, and Thrive',
@@ -14,12 +14,12 @@ const Index = () => {
                 'Security-first approach ingrained in our philosophy, prioritizing secure design and implementation',
                 'Cultural transformation driving collaboration, efficiency, and shared responsibility'
             ],
-            link: '',
+            link: '/services/devsecops',
             containerStyle: '',
             imageStyle: 'w-[60rem] h-auto'
         },
         {
-            header: 'Onboarding as a Service',
+            header: <h2 className="header_ii sm:w-[39rem]">Onboarding <span className="font-[400]">as</span> a <span className="text-[#F888C6]">Service</span></h2>,
             subheader: 'Streamline Your  CI/CD Process',
             image: '/service_codesnippet.png',
             title: 'Deliver Software Faster and Efficiently',
@@ -31,14 +31,14 @@ const Index = () => {
                 'Security-first approach ingrained in our philosophy, prioritizing secure design and implementation',
                 'Cultural transformation driving collaboration, efficiency, and shared responsibility'
             ],
-            link: '',
+            link: '/services/OBAAS',
             mutipleImage: <OnboardingLeft />,
             containerStyle: 'flex-row-reverse sm:mt-[10rem] mt-[5rem] text-end sm:text-start',
             roleOrientation: 'flex-row-reverse',
             imageStyle: '',
         },
         {
-            header: 'Incident Management',
+            header: <h2 className="header_ii"><span className="text-[#5747A5]">Incident</span> Management</h2>,
             subheader: 'Bridging the Gap between Development, Security, & Operations',
             image: '/incident_management.png',
             title: 'Combine Strengths, Deliver Securely, and Thrive',
@@ -49,13 +49,13 @@ const Index = () => {
                 'Full 24/7 support with less than 1-hour SLA for Sev 1 incidents',
                 'Proactive incident management to minimize downtime and loss of revenue'
             ],
-            link: '',
+            link: '/services/incident-management',
             roleOrientation: 'flex-row',
             containerStyle: 'sm:mt-[10rem] mt-[5rem]',
             imageStyle: 'sm:w-[55rem] sm:h-[53rem]'
         },
         {
-            header: 'Message Brokers',
+            header: <h2 className="header_ii"><span className="text-[#5747A5]">Message</span> Brokers</h2>,
             subheader: 'Scalable Systems with AceMQ',
             image: '/service_broker.png',
             title: 'Achieve Scalability with Asynchronous Messaging',
@@ -67,7 +67,7 @@ const Index = () => {
                 'Disaster Recovery (DR) Solutions : AceMQ helps implement effective DR solutions.'
             ],
             text: 'At AceMQ, we provide expert guidance for scalable systems through asynchronous messaging. Our services cover the selection of appropriate message patterns and testing of throughput and latency to ensure optimal performance.',
-            link: '',
+            link: '/services/message-broker',
             containerStyle: 'sm:mt-[10rem] text-end sm:text-start flex-row-reverse mt-[5rem] ',
             roleOrientation: 'flex-row-reverse',
             imageStyle: 'sm:w-[65rem] sm:h-auto hidden sm:block'
@@ -76,7 +76,7 @@ const Index = () => {
 
     const capabilitiesII = [
         {
-            header: 'Microservices Design and Development and Refactoring',
+            header: <h2 className="header_ii">Microservices <span className="text-[#F888C6]">Design and Development</span> and Refactoring</h2>,
             subheader: 'Transform Your Microservices',
             image: '/design.png',
             text: 'AceMQ offers comprehensive microservices design, development, and refactoring services that strictly adhere to industry best practices, including loose coupling and the 12Factor approach.',
@@ -86,32 +86,32 @@ const Index = () => {
                 'Golang starter kits : for quick development, expert guidance through microservices architecture, and assistance with refactoring to AWS Lambda.',
                 'AWS Lambda migration : process includes careful planning, automated conversion, redesign and optimization, and enhanced functionality and configuration.'
             ],
-            link: '',
+            link: '/services/micro-service',
             containerStyle: 'sm:mt-[15rem]',
             roleOrientation: 'flex-row',
             imageStyle: 'sm:w-[70rem] hidden sm:block h-auto',
             circle: '#fff'
         },
         {
-            header: 'Automated Testing',
-            subheader: 'Streamline Your Testing Process with Automated Testing',
+            header: <h2 className="header_ii"><span className="text-[#9B86FE]">Automated</span> Testing</h2>,
+            subheader: 'Streamline Your Testing Process with Automated Testing',                               
             title: 'Save Time and Resources with Our Unique Approach',
             image: '/service_automated_testing.png',
             text: 'Are you tired of manual testing for your e-commerce application? Our automated testing service offers a unique approach that saves time, resources, and sets us apart from the competition.',
             lineColor: '#FF88C3',
             roles: [
-                'AI-enhanced test code for efficient and effective testing, specializing in eCommerce services for customers, carts, orders, returns, payments, and accounting',
+                'AI-enhanced test code for efficient and effective testing',
                 'Integration of test case execution into your  CI/CD pipeline',
                 'Assistance with setting up  CI/CD pipelines if needed'
             ],
-            link: '',
+            link: '/services/automated-testing',
             containerStyle: 'sm:mt-[10rem] text-end sm:text-start flex-row-reverse items-center',
             roleOrientation: 'flex-row-reverse',
             imageStyle: 'sm:w-[60rem] hidden sm:block h-auto',
             circle: '#fff'
         },
         {
-            header: 'Data Analytics Integration',
+            header: <h2 className="header_ii sm:w-[28rem]">Data <span className="text-[#F888C6]">Analytics</span> Integration</h2>,
             subheader: 'Seamless Integration for E-commerce and Data Analytics',
             title: 'Unlock the Power of Your Data',
             image: '/service_py.png',
@@ -123,7 +123,7 @@ const Index = () => {
                 'Cost optimizations to save money and maximize the value of your data analytics investment',
                 'Fault tolerance for uninterrupted access to critical data, even during system failures',
             ],
-            link: '',
+            link: '/services/data-integration',
             containerStyle: 'sm:mt-[10rem] items-center',
             imageStyle: 'sm:w-[60rem] hidden sm:block h-auto',
             circle: '#fff'
@@ -131,12 +131,12 @@ const Index = () => {
     ]
     return (
         <section className="">
-            <div className="bg-white text-black px-[3rem] sm:px-[10rem] py-[3rem]">
+            <div className="bg-white text-black px-[3rem] sm:px-[10rem] py-[3rem] sm:py-[8rem]">
                 <MaxContainer>
                     <div className="sm:flex flex-col">
-                        <h2 className="sub-header text-center mb-[2.5rem]"><span className="text-[#37ACA8]">Our</span><span className="font-[400]"> Consulting</span> Capabilities: </h2>
-                        <img src="/capabilities.svg" className='mb-[3rem] sm:hidden' alt="capabilities" />
-                        <img src="/capabilities_sm.svg" className='my-[4rem] w-[130rem] sm:mb-[8rem] self-center' alt="capabilities" />
+                        <h2 data-animation-id='slideIn' className="sm:text-[5rem] font-[700] text-[3rem] text-center mb-[2.5rem]"><span className="text-[#37ACA8]">Our</span><span className="font-[400]"> Consulting</span> Capabilities: </h2>
+                        <img data-animation-id='slideIn' src="/capabilities.svg" className='mb-[3rem] sm:hidden' alt="capabilities" />
+                        <img data-animation-id='slideIn' src="/capabilities_sm.svg" className='my-[4rem] w-[130rem] sm:mb-[8rem] self-center' alt="capabilities" />
 
                         {
                             capabilities.map((capability, index) => (<PlaceTextBesideImage item={capability} key={index} />))

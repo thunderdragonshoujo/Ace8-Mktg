@@ -1,7 +1,14 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
+import milestone, {slideIn} from "@/app/Animations/common";
+import { useEffect } from "react";
 
 const Index = () => {
+    useEffect(() => {
+        milestone()
+        slideIn()
+    }, [])
     const domains = [
         {
             image: '/advanced_architecture.svg',
@@ -75,17 +82,18 @@ const DomiansMobile = ({ domains }) => (
 
 
 const DomainsDesktop = ({ domains }) => (
-    <section className="hidden scroll-mt-[6rem] sm:flex px-[3rem] sm:px-[10rem] gap-x-[4rem]"  id="
+    <section className="hidden scroll-mt-[6rem] sm:flex px-[3rem] sm:px-[10rem] gap-x-[4rem]" id="
     domains">
-        <img src="/mile_4.png" alt="arrow" className="hidden sm:w-[3.7rem] sm:block" />
+        
+        <img src="/mile_4.png" alt="arrow" className="hidden mt-[1.8rem] sm:w-[3.7rem] sm:block" />
         <div className="flex flex-col">
             <div className="">
-                <h2 className="text-[5rem] font-[700]"><span className="text-accent-200">Our</span> 8 Domains</h2>
-                <p className="text-[1.5rem]">At Ace8, we empower businesses to thrive in the digital age through cutting-edge technology services spanning eight crucial domains. From Advanced Architectures to Microservices, Code & Development, we're dedicated to delivering unparalleled expertise and innovative solutions tailored to meet your specific needs.</p>
+                <h2 className="text-[5rem] font-[700]"  data-animation-id='slideIn'><span className="text-accent-200">Our</span> 8 Domains</h2>
+                <p className="text-[1.5rem]"  data-animation-id='slideIn'>At Ace8, we empower businesses to thrive in the digital age through cutting-edge technology services spanning eight crucial domains. From Advanced Architectures to Microservices, Code & Development, we're dedicated to delivering unparalleled expertise and innovative solutions tailored to meet your specific needs.</p>
             </div>
 
             <div className="h-[93rem] sm:mt-[8rem] grid place-content-center relative">
-                <Image src='/center_logo.png' className="w-[45rem]" width={550} height={178} />
+                <Image src='/center_logo.png'  data-animation-id='slideIn' className="w-[45rem]" width={550} height={178} />
                 {domains.map((domain, index) => <DomainDesktop domain={domain} key={index} id={index} />)}
             </div>
             <Conntal />
@@ -126,7 +134,7 @@ const DomainDesktop = ({ domain, id }) => {
         }
     }
     return (
-        <div className={`w-[25rem] flex flex-col absolute ${returnAbsoluteValue(id)}`}>
+        <div className={`w-[25rem] flex flex-col absolute ${returnAbsoluteValue(id)}`}  data-animation-id='slideIn'>
             <Image src={domain.image} width={115} height={90} className='w-[15rem]' alt="icon" />
             <p className={`text-[2rem] font-[700]`}>{domain.name}</p>
             <p className={`text-[2rem] font-[700] text-accent-200`}>{domain.title}</p>
@@ -136,7 +144,7 @@ const DomainDesktop = ({ domain, id }) => {
 }
 
 const Conntal = () => (
-    <Link href='http://conntalent.com' className="py-[2rem] hover:opacity-[.7] transition-all px-[2rem] sm:mt-[10rem] w-fit bg-conner-gradient rounded-[10rem] self-center mt-[6rem]">
+    <Link href='http://conntalent.com'  data-animation-id='slideIn' className="py-[2rem] hover:opacity-[.7] transition-all px-[2rem] sm:mt-[10rem] w-fit bg-conner-gradient rounded-[10rem] self-center mt-[6rem]">
         <div className="flex gap-[1rem]">
             <div className="bg-black rounded-full w-[7rem] h-[7rem] grid place-content-center">
                 <img src='/profile.png' width={48} className="w-[3rem] h-[3rem]" alt="profile icon" height={48} />
