@@ -27,13 +27,17 @@ export const metadata = {
 
 const About = () => {
   return (
-    <MaxContainer>
+    <>
       <Hero />
-      <Brand />
+      <MaxContainer>
+        <Brand />
+      </MaxContainer>
       <Story />
-      <Belief />
-      <Partners />
-    </MaxContainer>
+      <MaxContainer>
+        <Belief />
+        <Partners />
+      </MaxContainer>
+    </>
   );
 };
 

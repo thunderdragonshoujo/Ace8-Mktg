@@ -131,7 +131,7 @@ const FooterDesktop = () => {
                     src="/tel.png"
                     alt=""
                   />
-                  <p className="text-[1.5rem]">305-981-6475</p>
+                  <p className="text-[1.5rem]">305-204-2607</p>
                 </li>
                 <li className="flex gap-[1rem] items-center">
                   <img

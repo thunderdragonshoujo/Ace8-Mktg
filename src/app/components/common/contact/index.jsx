@@ -63,7 +63,7 @@ const Index = ({ route }) => {
       id="contact"
     >
       <ToastContainer />
-      <div className="pt-[2rem] px-[3rem] pb-[1rem] sm:mt-[12rem] sm:p-[7rem] sm:bg-black sm:flex sm:justify-between rounded-[3rem]">
+      <div data-animation-id='slideIn' className="pt-[2rem] px-[3rem] pb-[1rem] sm:mt-[12rem] sm:p-[7rem] sm:bg-black sm:flex sm:justify-between rounded-[3rem]">
         <div className="sm:flex-1 sm:relative sm:pt-[7rem]">
           <h4 className="text-center text-[3rem] sm:text-left sm:absolute sm:top-[-3rem] sm:bg-[#8FD5CC] sm:text-[#030303] sm:px-[2rem] sm:py-[.8rem] sm:rounded-[1rem]">
             Contact{" "}

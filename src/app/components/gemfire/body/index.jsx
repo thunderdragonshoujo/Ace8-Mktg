@@ -38,21 +38,21 @@ const Index = () => {
         <section className="bg-white">
             <MaxContainer>
                 <div className="px-[3rem] sm:px-[10rem] relative pt-[15rem] sm:pt-[30rem] pb-[5rem] flex flex-col text-black">
-                    <img src="/man_walk.svg" alt="explore" className="absolute sm:w-[100rem] self-center top-[-3rem] sm:top-[-25rem]" />
-                    <div className="flex justify-around sm:items-center">
+                    <img src="/man_walk.svg" data-animation-id='slideIn' alt="explore" className="absolute sm:w-[100rem] self-center top-[-3rem] sm:top-[-25rem]" />
+                    <div data-animation-id='slideIn' className="flex justify-around sm:items-center">
                         <p className="sm:w-[65rem] font-[500] sm:text-[1.8rem] sm:leading-[3rem]">GemFire serves as a distributed XA Engine, offering unparalleled capabilities in its domain.Navigating the high-tech problem space of GemFire requires specialized expertise, which can be nearly impossible to find. However, our team boasts two of GemFire's original developers, ensuring you access to unmatched knowledge and insights.</p>
                         <img src="/VM_ware.svg" alt="vmware logo" className="w-[10rem] sm:w-[25rem]" />
                     </div>
 
-                    <div className="sm:flex sm:justify-between sm:mt-[8rem] sm:items-start">
+                    <div data-animation-id='slideIn' className="sm:flex sm:justify-between sm:mt-[8rem] sm:items-start">
                         <img src="/expert_guide.svg" className='mt-[3rem] w-[45rem] sm:mt-[0]' alt="expert guild" />
                         <img src="/distribution_flow.svg" className='mt-[3rem] sm:mt-[0] sm:w-[80rem]' alt="distribution flow" />
                     </div>
-                    <div className="flex justify-between sm:w-[80rem] sm:mx-auto sm:flex-row-reverse sm:items-center mt-[5rem]">
-                        <h2 className="sub-header w-[20rem] sm:w-[25rem]">Why Choose Our <span className="text-[#9B86FE]">GemFire Expertise</span></h2>
+                    <div data-animation-id='slideIn' className="flex justify-between sm:w-[90rem] sm:flex-row-reverse sm:items-center mt-[5rem]">
+                        <h2 className="font-[700] text-[3rem] sm:text-[5rem] w-[20rem] sm:w-[40rem]">Why <span className="font-[400]">Choose Our </span><span className="text-[#9B86FE]">GemFire Expertise</span></h2>
                         <img src="/home.svg" alt="home" className="w-[14.2rem] sm:w-[60rem] sm:h-[40rem] h-[10rem]" />
                     </div>
-                    <div className="responsive-grid mt-[5rem]">
+                    <div data-animation-id='slideIn' className="responsive-grid mt-[5rem]">
                         { cards.map((card, index) =>   <Card card={card} key={index} />)}
                     </div>
                     {/* <Image src='/gemfire_reasons.png' width={370} height={663} className='mt-[3rem] sm:hidden' alt='gemfire reasons' /> */}

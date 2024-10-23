@@ -1,36 +1,41 @@
 'use client';
 import Image from "next/image";
 import Carousel from 'react-multi-carousel';
+import milestone, { slideIn } from "@/app/Animations/common";
 import 'react-multi-carousel/lib/styles.css';
+import { useState, useEffect } from "react";
 
 const Index = () => {
-    // const brands = ['/gojek.png', '/enbridge.png', '/ceaser.png', '/henry.png', '/square.png']
+    useEffect(() => {
+        milestone()
+        slideIn()
+    }, [])
+    const brands = ['/gojek.png', '/enbridge.png', '/ceaser.png', '/henry.png', '/square.png']
 
-    const brands = [
+    const _brands = [
         {
-            path: '/square.png',
-            style: 'w-[3rem] sm:w-[7rem]'
+            icon: '/square.png',
+            style: 'sm:w-[6rem] w-[7rem] aspect-square hover:opacity-[.5]',
         },
         {
-            path: '/henry.png',
-            style: 'sm:w-[22rem]'
+            icon: '/microsoft.png',
+            style: 'sm:w-[18rem] hover:opacity-[.5]',
         },
         {
-            path: '/microsoft.png',
-            style: 'sm:w-[18rem]'
+            icon: '/enbridge.png',
+            hoveredIcon: '/enbridge_hov.png',
+            style: 'sm:w-[18rem]',
         },
         {
-            path: '/ceaser.png',
-            style: 'sm:w-[18rem]'
+            icon: '/gojek.png',
+            hoveredIcon: '/gojek_hov.png',
+            style: 'sm:w-[18rem]',
         },
         {
-            path: '/enbridge.png',
-            style: 'sm:w-[18rem]'
+            icon: '/ceaser.png',
+            hoveredIcon: '/ceaser_hov.png',
+            style: 'sm:w-[18rem]',
         },
-        {
-            path: '/gojek.png',
-            style: 'sm:w-[15rem]'
-        }
     ]
 
     const responsive = {
@@ -44,15 +49,15 @@ const Index = () => {
         }
     }
     return (
-        <section className="px-[3rem] sm:px-[10rem] mt-[5rem] sm:mt-[1.5rem] pb-[5.2rem] sm:py-[10rem] flex gap-x-[4rem] w-[100%]">
-            <div className="w-[100%]">
-                <h2 className="text-[2.9rem] sm:text-[3.2rem] text-center sm:text-left font-[700] mb-[3rem]">Trusted By The <span className="text-accent-100">Brands Globally</span></h2>
+        <section className="px-[3rem] sm:px-[10rem] sm:pt-[5rem] mt-[5rem] sm:mt-[1.5rem] relative pb-[5.2rem] sm:pb-[8.5rem] flex gap-x-[4rem] w-[100%]">
+            <div className="w-[100%]" data-animation-id="slideIn">
+                <h2 className="text-[2.9rem] sm:text-[3.2rem] text-center sm:text-left font-[700] mb-[3rem]">Trusted By <span className="text-accent-100">Brands Globally</span></h2>
                 <div className="hidden sm:flex items-center justify-between w-[100%]">
-                    {brands.map((item, i) => <Image src={item.path} key={i} className={`h-auto ${item.style}`} alt="brands icon" width={150} height={100} />)}
+                    {_brands.map((item, i) => <Brand item={item} key={i} />)}
                 </div>
                 <div className="sm:hidden">
                     <Carousel showDots={true} autoPlay={true} autoPlaySpeed={1000} infinite={true} removeArrowOnDeviceType={["tablet", "mobile", 'desktop']} responsive={responsive}>
-                        {brands.map((item, i) => <Image src={item.path} key={i} className={`h-auto ${item.style}`} alt="brands icon" width={150} height={100} />)}
+                        {_brands.map((item, i) => <Image src={item.icon} key={i} className={`${item.style}`} width={150} height={100} />)}
                     </Carousel>
                 </div>
             </div>
@@ -61,3 +66,17 @@ const Index = () => {
 }
 
 export default Index;
+
+
+const Brand = ({ item }) => {
+    const [hovered, setHovered] = useState(false)
+    return (
+        <Image
+            src={hovered && item.hoveredIcon ? item.hoveredIcon : item.icon}
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            className={`${item.style} cursor-pointer`}
+            width={150}
+            height={100} />
+    )
+}
