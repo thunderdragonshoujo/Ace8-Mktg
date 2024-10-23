@@ -36,8 +36,10 @@ const MessageBroker = () => {
       <Achievement />
       <Values />
       <MaxContainer>
-        <Banner />
-        <Contact route={"message-broker"} />
+        <div className="bg-white">
+          <Banner />
+          <Contact route={"message-broker"} />
+        </div>
       </MaxContainer>
     </>
   );
