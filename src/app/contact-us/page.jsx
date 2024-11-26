@@ -5,7 +5,7 @@ import Brands from "../components/common/brand";
 import { client } from "../../sanity/lib/client";
 
 export async function generateMetadata() {
-  const page = await client.fetch(`*[ _type == "about"]`);  
+  const page = await client.fetch(`*[ _type == "contact"]`);  
   return {
     title: page[0]?.meta_title,
     description: page[0]?.meta_description,
@@ -24,10 +24,28 @@ export async function generateMetadata() {
   };
 }
 
-const Index = () => {
+async function getData() {
+  const contactPage = await client.fetch(`*[ _type == "contact"]{
+    meta_tags,
+    meta_description,
+    meta_tags,
+    title,
+    short_info,
+    email,
+    mobile_number
+  }`);
+  return {
+    contactPage:contactPage[0]
+  }
+}
+
+const Index = async () => {
+  const { contactPage } = await getData()
+  console.log("🚀 ~ Index ~ contactPage:", contactPage)
+
   return (
     <MaxContainer>
-      <Hero />
+      <Hero data={contactPage}/>
       <Body />
       <Brands />
     </MaxContainer>
