@@ -17,6 +17,37 @@ export default {
     ],
     fields: [
       defineField({
+        name: "title",
+        title: "Title",
+        type: "array",
+        group: 'data-fields',
+        of: [
+          {
+            type: "block",
+          },
+        ],
+      }),
+      defineField({
+        title: "short Info",
+        name: "short_info",
+        type: "text",
+        group: 'data-fields'
+      }),
+      defineField({
+        title: "Email",
+        name: "email",
+        type: "string",
+        group: 'data-fields'
+      }),
+      defineField({
+        title: "Mobile Number",
+        name: "mobile_number",
+        type: "string",
+        group: 'data-fields'
+      }),
+
+      // SEO 
+      defineField({
         title: "Meta Title",
         name: "meta_title",
         type: "string",

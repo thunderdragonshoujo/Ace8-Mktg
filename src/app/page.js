@@ -45,7 +45,6 @@ async function getData() {
 
 export default async function Home() {
   const { homepage } = await getData()
-  console.log("🚀 ~ Home ~ homepage:", homepage)
 
   return (
     <>
