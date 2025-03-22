@@ -9,9 +9,13 @@ import Management from "./components/home/management";
 import Impact from "./components/home/impact";
 import Mission from "./components/home/mission";
 import Approach from "./components/home/approach";
-import Contact from "./components/home/contact";
 import Formular from "./components/home/formula";
 import MaxContainer from "./components/common/maxContainer/index";
+import dynamic from "next/dynamic";
+
+const LazyContact = dynamic(() => import("./components/home/contact"), {
+  ssr: false,
+});
 
 export const metadata = {
   title: "Ace8 | Digital Transformation, DevSecOps, Cloud-Native & Automation",
@@ -49,7 +53,7 @@ export default function Home() {
         <Formular />
         <Mission />
         <Approach />
-        <Contact />
+        <LazyContact />
       </MaxContainer>
     </>
   );
