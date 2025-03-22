@@ -2,10 +2,17 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-const Index = ({ setOpenService }) => {
+const Index = ({ setOpenService, openService }) => {
   return (
-    <div className="fixed top-[20rem] sm:top-[10rem] rounded-[.8rem] sm:rounded-[0] sm:px-[10rem] px-[3rem] sm:w-auto w-[32rem] sm:h-auto py-[2rem] sm:py-[5rem] bg-[#161b22] z-[33] sm:flex gap-[3rem]">
-      <button onClick={() => setOpenService(false)} className="ml-auto sm:mb-[2rem] block">
+    <div
+      className={`${
+        openService ? "sm:flex" : "hidden"
+      } fixed top-[20rem] sm:top-[10rem] rounded-[.8rem] sm:rounded-[0] sm:px-[10rem] px-[3rem] sm:w-auto w-[32rem] sm:h-auto py-[2rem] sm:py-[5rem] bg-[#161b22] z-[33] gap-[3rem]`}
+    >
+      <button
+        onClick={() => setOpenService(false)}
+        className="ml-auto sm:mb-[2rem] block"
+      >
         <img src="/close.png" className="sm:hidden" alt="close" />
       </button>
       <div className="pr-[3rem] sm:border-r">
@@ -65,7 +72,9 @@ const Index = ({ setOpenService }) => {
         </div>
       </div>
       <div className="mt-[2rem] sm:mt-[0]">
-        <p className="font-[700] sm:mb-[2rem] mb-[.5rem] text-accent-100">Other Service</p>
+        <p className="font-[700] sm:mb-[2rem] mb-[.5rem] text-accent-100">
+          Other Service
+        </p>
         <ul className="sm:mb-[3rem] mb-[1.7rem]">
           <Link href="/services/AWS">
             <li className="font-[500] text-[1.4rem] mb-[.5rem] hover:text-accent-100 text-[#FF88C3] transition-all">
