@@ -1,35 +1,25 @@
-"use client"
-import Hero from "../../components/tomcat/hero";
-import SupportServices from "../../components/tomcat/supportServices";
-import SupportCloudBased from "../../components/tomcat/supportCloudBased";
-import Partner from "../../components/tomcat/partner";
-import SupportOnPremises from "../../components/tomcat/supportOnPremises";
-import CTA from "../../components/tomcat/CTA";
-import Contact from "../../components/common/contact";
-import { slideIn } from "../../Animations/common";
-import { useEffect } from "react";
-import MaxContainer from "../../components/common/maxContainer";
-import UseCase from "@/app/components/tomcat/usecase";
+import TomCat from "../../components/tomcat";
 
+export const metadata = {
+  title: "Expert Apache Tomcat Consulting & Support Services | Ace8.io",
+  description:
+    "Boost your Java web application's performance with our expert Apache Tomcat consulting and support services. We provide tailored solutions for both cloud-based and on-premises deployments.",
+  alternates: {
+    canonical: "https://www.ace8.io/services/tomcat",
+  },
+  openGraph: {
+    title: "Expert Apache Tomcat Consulting & Support Services | Ace8.io",
+    description:
+      "Boost your Java web application's performance with our expert Apache Tomcat consulting and support services. We provide tailored solutions for both cloud-based and on-premises deployments.",
+    url: "https://www.ace8.io/services/tomcat",
+    siteName: "Ace8",
+    locale: "en_US",
+    type: "website",
+  },
+};
 
-const TomCat = () => {
-    useEffect(() => {
-        slideIn()
-    }, [])
-    return (
-        <div className="sm:pt-[9rem] pt-[6rem] pb-[7rem] overflow-x-hidden w-[100vw]">
-            <Hero />
-            <SupportServices />
-            <SupportCloudBased />
-            <SupportOnPremises />
-            <Partner />
-            <UseCase />
-            <CTA />
-            <MaxContainer>
-                <Contact />
-            </MaxContainer>
-        </div>
-    );
-}
+const TomCatPage = () => {
+  return <TomCat />;
+};
 
-export default TomCat;
+export default TomCatPage;
